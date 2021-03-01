@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/_500dp"
     android:layout_marginTop="@dimen/_20dp"
@@ -35,87 +36,12 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_main_loc"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_200dp"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/ib_bekasi"
-            android:layout_width="@dimen/_24dp"
-            android:layout_height="@dimen/_24dp"
-            android:background="@color/white"
-            android:contentDescription="@string/imagebutton"
-            android:src="@drawable/ic_location"
-            android:theme="@style/Theme.WeatherApp.New" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_bekasi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5dp"
-                android:text="@string/location_dummy"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tv_sub_bekasi"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5dp"
-                android:text="@string/bekasi"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="16sp" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_20dp"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/ib_perth"
-            android:layout_width="@dimen/_24dp"
-            android:layout_height="@dimen/_24dp"
-            android:background="@color/white"
-            android:contentDescription="@string/imagebutton"
-            android:src="@drawable/ic_location"
-            android:theme="@style/Theme.WeatherApp.New" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/tv_perth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5dp"
-                android:text="@string/location_dummy_2"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="16sp" />
-
-            <TextView
-                android:id="@+id/tv_sub_perth"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_5dp"
-                android:text="@string/perth"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="16sp" />
-        </LinearLayout>
-
-    </LinearLayout>
+        android:layout_height="300dp"
+        android:layout_marginTop="@dimen/_40dp"
+        tools:listitem="@layout/item_city" />
 
     <LinearLayout
         android:layout_width="match_parent"
